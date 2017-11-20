@@ -1,5 +1,4 @@
 #include <dht.h>
-
 #include <lmic.h>
 #include <hal/hal.h>
 #include <SPI.h>
@@ -79,7 +78,7 @@ void onEvent (ev_t ev) {
       break;
     case EV_JOINED:
       Serial.println(F("EV_JOINED"));
-      Serial.println(F("Yangyh test 2"));
+     
 
       // Disable link check validation (automatically enabled
       // during join, but not supported by TTN at this time).
