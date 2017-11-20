@@ -1,5 +1,4 @@
 #include <dht.h>
-
 #include <lmic.h>
 #include <hal/hal.h>
 #include <SPI.h>
@@ -13,8 +12,6 @@ String datastring3=datastring1+datastring2;
 
 char dht_hum[50] = {"\0"};
 char* dht_tem[50]= {"\0"}; 
-
-//double temperature,info,humidity;
 float info;
 char  b =",";
 
@@ -263,7 +260,7 @@ void dhtWrite()
     
      
     
-     strcat(dht_info,b);
+     
      strcat(dht_info,dht_hum);
      strcat(dht_info,"%");
      strcat(dht_info,b);
