@@ -14,9 +14,9 @@ unsigned int count = 1;        //For times count
 String datastring1="";        
 String datastring2="";        
 String datastring3="";
-char datasend[50];     //Used to store GPS data for uploading
+char datasend[20];     //Used to store GPS data for uploading
 
-char gps_lon[50]={"\0"};  //Storage GPS info
+char gps_lon[20]={"\0"};  //Storage GPS info
 char gps_lat[20]={"\0"}; //Storage latitude
 char gps_alt[20]={"\0"}; //Storage altitude
 float flat, flon,falt;
