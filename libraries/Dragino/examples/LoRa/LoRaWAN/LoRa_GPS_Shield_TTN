@@ -69,6 +69,9 @@ void do_send(osjob_t* j){
     if (LMIC.opmode & OP_TXRXPEND) {
         Serial.println("OP_TXRXPEND, not sending");
     } else {
+        GPSRead();
+        GPSWrite();
+  
         // Prepare upstream data transmission at the next possible time.
           LMIC_setTxData2(1,datasend,sizeof(datasend)-1,0);
         //LMIC_setTxData2(1, mydata, sizeof(mydata)-1, 0);
@@ -256,9 +259,7 @@ static void smartdelay(unsigned long ms)
 
 void loop() {
     os_runloop_once();
-     GPSRead();
-     GPSWrite();
-  
+     
    
     
 }
